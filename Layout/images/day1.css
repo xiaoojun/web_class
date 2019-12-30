@@ -1,0 +1,39 @@
+/* p {
+    float: right;
+    background-color: antiquewhite;
+} */
+
+p  {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    background-color: aqua;
+}
+.box1 {
+    width: 200px;
+    border: 2px solid #0f0;
+    overflow: hidden;
+}
+
+.box1 .child-1 {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: #fd0;
+}
+
+.box1 .child-2 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #fba;
+}
+
+.box2 {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #00f;
+    /* clear: both; */
+}
+
+
