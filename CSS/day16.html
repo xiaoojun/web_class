@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./day16.css">
+    <title>Document</title>
+    <style>
+        #move-transition-box {
+            background-color: cornflowerblue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .move-transition {
+            transition-property: background-color, height, width;
+            transition-duration: 1.8s 1.0s 1.0s;
+            transition-delay: 0.1s;
+            transition-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS中主要有两种方式实现动画
+        1、animation 
+        2、transition 过渡动画 
+     -->
+     <div class="bg-box bg-box-animation">1</div>
+     <div class="move-box move-box-animation"></div>
+
+     <div id="move-transition-box" class="move-transition" onclick="scale()"> 
+     </div>
+     <script>
+         function scale() {
+             let tbox = document.getElementById('move-transition-box');
+             tbox.style.height = 200 + 'px';
+             tbox.style.width = 200 + 'px';
+             tbox.style.backgroundColor = 'red';
+         }
+     
+     </script>
+    </body>
+</html>

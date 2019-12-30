@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+    head标签： 
+    1、定义基本的元数据信息 提供关于文档的额外信息
+    2、定义 CSS 样式，可通过 style 标签或 link 的方式引入
+    3、定义 JavaScript 内容，可通过 script 或 link 的方式引入，
+    这里需要强调一点 head 中定义的 JavaScript 将会在页面加载前执行，会阻塞页面加载，
+    所以往往会把 JavaScript 定义在 body 标签中；
+    4、通过 onload 方法可以监听页面加载完成，在这个时机可以对 DOM 进行操作
+    5、定义 title 标签，也就是文档的标题
+    -->
+<head>
+    <!-- 定义页面的编码方式 -->
+    <meta charset="UTF-8">
+    <!-- 
+    viewport 可是区域 宽度为设备的宽度
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    http-equiv 表示执行一个命令 下面设置 HTTP 的 content-type
+     -->
+    <meta equivhttp-="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="descripton" content="前端小课">
+    <link rel="stylesheet" href="day3.css">
+    <script src="day3.js"></script>
+    <title>这里是文档标题</title>
+
+    
+    <style>
+        .p1 {
+            font-size: 20px;
+            color: greenyellow;
+        }
+    </style>
+    <script>
+        let name = "前端小课";
+        console.log(name);
+    </script>
+    <script>
+        window.onload = function() {
+            console.log("页面加载完成");
+        }
+    </script>
+
+</head>
+<body>
+    <p class="p1">这里使用的是内部CSS</p>
+    <p class="p2">这里使用的外部CSS</p>
+    <script>
+        console.log("在body标签找那个的js代码");
+    </script>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta">meta标签参考链接</a>
+</body>
+</html>

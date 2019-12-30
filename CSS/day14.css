@@ -1,0 +1,62 @@
+/* 
+伪选择器：
+伪类选择器： 选中某个元素中符合某些条件的元素
+常用的伪类选择器
+:first-child
+:not
+:nth-child()
+:only-child()
+:root()
+:disabled
+
+
+伪元素选择器:给现有元素添加某些新的内容
+::first-letter 对首字母进行操作
+:::first-line 对首行内容进行操作
+
+
+*/
+a {
+    font-size: 18px;
+    color: black;
+}
+
+/* 鼠标覆盖上去 */
+a:hover {
+    color: blue;
+}
+
+/* 点击过了 */
+a:visited {
+    color: gray;
+}
+
+.left {
+    color: black;
+    font-size: 15px;
+}
+
+.left::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('./images/01.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+.right {
+    color: black;
+    font-size: 15px;
+}
+
+.right::after {
+    content: '→';
+    display: inline-block;
+    color: red;
+    margin-left: 5px;
+}

@@ -1,0 +1,92 @@
+/* div p {
+    color: red;
+
+}
+p {
+    color: green;
+} */
+
+/* div p > p */
+
+.title {
+    color: red;
+}
+
+#name {
+    color: green;
+}
+
+/* id选择器 > 类选择器 */
+
+/* 另一种权重计算方式 */
+
+/* 
+!important          Infinity
+行间样式                1000
+id                      100
+class | 属性 | 伪类       10
+标签选择器|伪元素           1
+通配符                    0
+
+同一行的选择器 将权重值相加 值大的优先级更高
+值一样 后面的覆盖前面的
+*/
+
+
+/* 
+选择器的种类 
+
+- id选择器
+<div id="id" class="class">1</div>
+#only {}
+
+- class选择器
+.class {}
+
+- 标签选择器
+div {}
+
+- 通配符选择器
+* {}
+
+- 父子选择器: 不一定非得是直接的子元素 子孙级的也可以
+div span
+div span div
+
+- 直接子元素选择器
+div > span
+
+- 并列选择器
+div.demo // <div class="demo">1</div>
+
+- 分组选择器 共用一个代码块
+em, 
+strong, 
+sapn {
+    color: red;
+}
+
+- 属性选择器：根据属性来匹配HTML元素
+[lefe] { }
+
+// 匹配使用属性为lefe 且值为liquid的元素
+[lefe="liquid"] {}
+
+//匹配所有使用属性为"lefe" 且值包含“spicy”的元素
+[lefe~="spicy"]
+
+
+- 伪选择器
+a:hover 鼠标悬停
+a:active 点击
+a:focus 聚焦
+
+- 伪元素选择器 
+它以“ :: ” 为标识符。比如修改首字母的样式。
+在超链接后添加一个向上的弯曲的箭头：
+p::first-letter
+P::first-line
+
+
+
+*/

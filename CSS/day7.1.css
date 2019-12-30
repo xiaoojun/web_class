@@ -1,0 +1,71 @@
+/* 
+A B {} : 
+A 元素的所有后代元素 B 都会起作用。下面的例子中 div p {}，
+它会遍历 div 中所有的子元素 p，
+只要找到 p 元素就应用对应的 CSS 样式，
+故所有的  p 元素都变成了红色 
+*/
+
+div p {
+    color: red;
+}
+
+/* 
+
+A > B {} : 
+A 元素的直接子节点会起作用，
+也就是只适用于 A 节点的第一层所有的子节点。
+例子中 div > p { } , 
+只会找到 div 的第一层子节点 p。
+
+*/
+
+div > p {
+    color: green;
+}
+
+/* 
+A + B {} : 
+匹配 A 的下一个兄弟节点，AB具有相同的父节点，并且 B 紧跟在 A 的后面；
+例子中 div + p { } 只会匹配 div 的下一个兄弟节点 p
+*/
+
+div + p {
+    color: greenyellow;
+}
+
+/* 
+A ~ B {} : B是 A 之后的任意一个兄弟节点。
+例子中 div ~ p { } 会匹配 div 的所有兄弟节点 p
+*/
+
+div ~ p {
+    color: purple;
+}
+
+/* 
+组选择器 A, B：
+A 和 B 元素具有同一规则的 CSS 样式，不同元素使用逗号隔开
+*/
+
+div, p {
+    color: cyan;
+}
+
+/* 
+@规则在CSS中用于传递元数据、条件信息或其他描述性信息。
+它们以at符号（@）开头，后跟一个标识符来说明它是什么类型的规则，
+然后是某种类型的语法块，以分号（；）结尾。
+由标识符定义的每种类型的 at 规则都有其自己的内部语法和语义
+
+@charset and @import (metadata)
+@media or @document (条件，嵌套申明)
+@font-face (描述信息)
+*/
+
+@media (min-width: 801px) {
+    body {
+      margin: 0 auto;
+      width: 800px;
+    }
+}

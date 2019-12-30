@@ -1,0 +1,92 @@
+p {
+    color: red;
+}
+
+.first {
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+#second {
+    color: blue;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* 属性选择器 */
+/* 匹配所有使用属性 "lefe" 的元素 */
+[lefe] {
+    color: green;
+}
+
+/* 匹配所有使用属性为 "lefe"，且值为 liquid 的元素 */
+[lefe='liquid'] {
+    background-color: goldenrod;
+}
+
+/* 匹配所有使用属性为 "lefe"，且值包含 spicy 的元素 */
+[lefe~='spicy'] {
+    color: red;
+}
+
+/* 
+还有类似于“正则表达式”的属性选择器，比如：
+[attr^=val] 匹配以 val 开头的元素，
+[attr$=val] ,匹配以 val 结尾的元素，
+[attr*=val]匹配包含 val 的字符串的元素 
+*/
+
+
+/* 
+伪类选择器
+它包含伪类（pseudo-classes）和伪元素（pseudo-elements）。
+这类选择器不是真正意义上的选择器，它作为选择器的一部分，起到选择器匹配元素的限定条件。
+比如，匹配 dom 树中某个元素的第一个孩子，匹配鼠标点击后的状态等
+
+*/
+
+/* 匹配超链接样式 */
+a {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 访问后的状态 */
+a:visited {
+    color: yellow;   
+}
+
+/* 鼠标悬停 点击 聚焦时的样式 */
+a:hover,
+a:active,
+a:focus {
+    color: darkred;
+    text-decoration: none;
+}
+
+/* 
+伪选择器 
+它以“ :: ” 为标识符。
+比如修改首字母的样式。在超链接后添加一个向上的弯曲的箭头
+*/
+
+p::first-letter {
+    font-weight: bold;
+    color: darkred;
+}
+
+p::first-line {
+    font-size: 3em;
+}
+
+[href^=http]::after {
+    content: '→';
+}
+
+/* 组合选择器 
+这种选择器可以作用于多个 HTML 元素，有多种组合方式，
+下面这些方式，CSS 都会作用于 B 元素。
+通过下面的例子来讲解这些选择器，例子类似于一个树形，表示不同的层级*/

@@ -1,0 +1,22 @@
+body {
+    font-size: 10px;
+    background-color: royalblue;
+}
+
+html {
+    font-size: 15px;
+}
+.content {
+    width: 50vw;
+    height: 50vh;
+    font-size: 20px;
+    background-color: #258bd6;
+}
+
+.title {
+    font-size: 13px;
+    /* 相对于字体大小 * 9 */
+    width: 9rem; 
+    height: 4rem;
+    background-color: #ef7235;
+}
